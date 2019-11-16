@@ -1,0 +1,14 @@
+
+logging.level:
+  root: WARN
+  com.example.cors: DEBUG
+
+cors:
+  allowed-origins:
+    - http://localhost:8080
+    - http://localhost:9001
+  allowed-methods: GET, DELETE, UPDATE
+  allowed-headers:
+  exposed-headers:
+  allow-credentials:
+  max-age:
