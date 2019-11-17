@@ -7,8 +7,11 @@ cors:
   allowed-origins:
     - http://localhost:8080
     - http://localhost:9001
-  allowed-methods: GET, DELETE, UPDATE
+  # Full list of HTTP request methods: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS, TRACE
+  # Don't use TRACE, as it provides too much info.
+
+  allowed-methods: GET, HEAD, POST, PUT, PATCH, DELETE
   allowed-headers:
   exposed-headers:
-  allow-credentials:
-  max-age:
+  allow-credentials: true             # Allows cookies to be sent in CORS.  allow-origins may not be '*'
+  max-age: 90                         # Pre-flight cache.  Value in seconds.
